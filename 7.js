@@ -1,0 +1,32 @@
+//html
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="">
+  <title></title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-model="message">
+    <h1>{{ message }}</h1>
+    <input type=checkbox v-model="toggle">チェックしてみて！！</input>
+    <h1 v-if="toggle">{{ text }}</h1>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</body>
+
+</html>
+
+//JS
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: "",
+    toggle: false,
+    text: "v-modelを理解しよう！",
+  }
+})
